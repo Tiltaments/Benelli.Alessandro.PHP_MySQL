@@ -1,0 +1,36 @@
+body, html { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; }
+
+/* Topbar per Login e Carrello (In alto a destra) */
+#topbar {
+    position: fixed; top: 0; right: 0; width: calc(100% - 200px); height: 50px;
+    background: #2c3e50; color: white; padding: 0 20px;
+    display: flex; align-items: center; justify-content: flex-end; box-sizing: border-box; z-index: 1000;
+}
+#topbar a { color: #1abc9c; text-decoration: none; margin-left: 15px; font-weight: bold; }
+
+/* Menu Laterale */
+#sidebar {
+    position: fixed; top: 0; left: 0; width: 200px; height: 100%;
+    background-color: #34495e; color: white; padding-top: 20px; z-index: 1001;
+}
+#sidebar h2 { text-align: center; color: #1abc9c; margin-bottom: 30px; }
+#sidebar ul { list-style: none; padding: 0; margin: 0; }
+#sidebar ul li a { display: block; color: white; text-decoration: none; padding: 15px 20px; border-bottom: 1px solid #2c3e50; }
+#sidebar ul li a:hover { background-color: #1abc9c; }
+
+/* Contenuto Principale */
+#content { margin-left: 200px; margin-top: 50px; padding: 30px; margin-bottom: 60px; }
+
+/* Stile per le sezioni a griglia (Cards) */
+.card-container { display: flex; flex-wrap: wrap; gap: 20px; }
+.card { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 15px; width: 250px; }
+.card img { width: 100%; border-radius: 5px; height: 180px; object-fit: cover; }
+.card form { margin-top: 15px; }
+
+/* Form e Bottoni */
+input[type="text"], input[type="password"] { width: 100%; padding: 8px; margin: 5px 0 15px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+input[type="submit"], .btn { background-color: #1abc9c; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 4px; text-decoration: none; }
+input[type="submit"]:hover, .btn:hover { background-color: #16a085; }
+
+/* Footer */
+#footer { position: fixed; bottom: 0; left: 200px; width: calc(100% - 200px); background-color: #2c3e50; color: white; text-align: center; padding: 10px 0; font-size: 0.9em; }
