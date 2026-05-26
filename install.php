@@ -35,5 +35,14 @@ if ($check->num_rows == 0) {
     ('Andrea', 'Verdi', 'CrossFit')");
 }
 
+// Inserisce dei Clienti di test (se la tabella è vuota)
+$check = $conn->query("SELECT * FROM `$tab_clienti`");
+if ($check->num_rows == 0) {
+    $conn->query("INSERT INTO `$tab_clienti` (nome, cognome, email, password, cf) VALUES 
+    ('Luca', 'Neri', 'luca.neri@example.com', 'password123', 'NRLLCU90A01H501X'),
+    ('Sara', 'Gialli', 'sara.gialli@example.com', 'password456', 'GLLSRA85B22H501Y'),
+    ('Alessandro', 'Benelli', 'benelli.1983399@studenti.uniroma1.it', 'password789', 'BNLLSN02T04D810Z')");
+}
+
 echo "<p>✅ Database e Tabelle creati con successo!</p>";
 echo "<a href='home.php'>Vai al sito web</a>";
